@@ -2,284 +2,280 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarB Production</title>
-    <meta name="keywords" content="Portfolio, Game Designer, UX Designer" />
-    <meta name="description" content="A UX Designer that can a bit of everything" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon-white.png">
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarB Production</title>
+  <meta name="keywords" content="Portfolio, Game Designer, UX Designer" />
+  <meta name="description" content="A UX Designer that can a bit of everything" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon-white.png">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <!-- <div id="under-construction">
-    <img src="img/construction-icon.png" alt="">
-    <div id="construction-text">
-        <p>Currently updating my portfolio</p>
-        <p>Goal is to be done by 20-03-2023 </p>
-        <p id="regards">Regards Martin Boesen aka MarB Production</p>
-    </div> 
+  <img src="img/construction-icon.png" alt="">
+  <div id="construction-text">
+    <p>Currently updating my portfolio</p>
+    <p>Goal is to be done by 20-03-2023 </p>
+    <p id="regards">Regards Martin Boesen aka MarB Production</p>
+  </div> 
 </div> -->
 
 <body>
-    <header id="header">
-        <nav>
-            <div id="top-nav">
-                <a id="logo" href="#top"><img src="img/marb-production-logo-white.png" alt="MarB Production"></a>
-                <div id="right-nav">
-                    <a href="#projects">My Projects</a>
-                    <a href="#about-me">About me</a>
-                    <a href="#contact">Contact</a>
+  <header id="header">
+    <nav>
+      <div id="top-nav">
+        <a id="logo" href="#top"><img src="img/marb-production-logo-white.png" alt="MarB Production"></a>
+        <div id="right-nav">
+          <a href="#projects">My Projects</a>
+          <a href="#about-me">About me</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="burger-icon">
+          <img src="img/burger-icon.png" alt="Activate dropdown menu">
+        </div>
+      </div>
+  
+      <div id="dropdown-menu">
+        <a href="#projects">My Projects</a>
+        <a href="#about-me">About me</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article id="top" class="pages">
+      <h1>Martin Rieper 'MarB' Boesen </h1>
+      <h2 id="top-h2">I want to become a:</h2>
+      <picture id="top-img">
+        <source media="(min-width: 800px)" srcset="img/top-segment-img.png">
+        <img src="img/mobile-top-segment-img.png" alt="Picture of me">
+      </picture>
+    </article>
+          
+    <article id="projects" class="pages">
+      <h2>My Projects</h2>
+      <div id="project-links">
+        <a href="#slide1">Booking project</a>
+        <!-- <a href="#slide2">Mobile game: Bloyn</a> -->
+        <a href="#slide3">Bonus video: Gamification</a>
+      </div>
+      <div id="slide-arrow-flex">
+        <img class="slide-arrows" id="slide-left" src="img/left-arrow.png" alt="One slide to the left">
+        <p id="slide-arrow-text">Swipe for more projects</p>
+        <img class="slide-arrows" id="slide-right" src="img/right-arrow.png" alt="One slide to the right">
+      </div>
+      <div id="isolated-scroll">
+        <div id="projects-overflow">
+          <section class="slides" id="slide1">
+            <div class="content-contain">
+              <h3>Booking project</h3>
+              <div class="column-flex">
+                <div class="content-column">
+                  <img class="preview-img" src="img/booking-project-img.png" alt="">
+                  <p class="keywords">
+                    Spring Boot - React - HTML - CSS
+                  </p>
                 </div>
-                <div id="burger-icon">
-                    <img src="img/burger-icon.png" alt="Activate dropdown menu">
+                <div class="content-column bottom-column">
+                  <p class="project-description">
+                    This website was a group project doing my Web Development bachelor degree. 
+                    The goal was to create a booking solution, to book study rooms at our school.<br>
+                    Originally, it was built using MySQL, PHP, JavaScript. Since then,
+                    I have rebuilt it with Spring Boot and React as these technologies are more widely used.<br>
+                    If you want to check it out, you can clone the project from my Github using the button below.
+                  </p>
+                  <a class="button" href="https://github.com/MarBProduction/eaaa-booking-project" target="_blank">Check it out!</a>
                 </div>
+              </div>
             </div>
-        
-            <div id="dropdown-menu">
-                <a href="#projects">My Projects</a>
-                <a href="#about-me">About me</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+          </section>
 
-    <main id="content">
-
-        <article id="top" class="pages">
-            <h1>Martin Rieper 'MarB' Boesen </h1>
-            <h2 id="top-h2">I want to become a:</h2>
-            <picture id="top-img">
-				<source media="(min-width: 800px)" srcset="img/top-segment-img.png">
-				<img src="img/mobile-top-segment-img.png" alt="Picture of me">
-			</picture>
-        </article>
-            
-        <article id="projects" class="pages">
-            <h2>My Projects</h2>
-            <div id="project-links">
-                <a href="#slide1">Booking project</a>
-                <!-- <a href="#slide2">Mobile game: Bloyn</a> -->
-                <a href="#slide3">Bonus video: Gamification</a>
-            </div>
-            <div id="slide-arrow-flex">
-                <img class="slide-arrows" id="slide-left" src="img/left-arrow.png" alt="One slide to the left">
-                <p id="slide-arrow-text">Swipe for more projects</p>
-                <img class="slide-arrows" id="slide-right" src="img/right-arrow.png" alt="One slide to the right">
-            </div>
-            <div id="isolated-scroll">
-                <div id="projects-overflow">
-                    <section class="slides" id="slide1">
-                        <div class="content-contain">
-                            <h3>Booking project</h3>
-                            <div class="column-flex">
-                                <div class="content-column">
-                                    <img class="preview-img" src="img/booking-project-img.png" alt="">
-                                    <p class="keywords">
-                                        Spring Boot - React - HTML - CSS
-                                    </p>
-                                </div>
-                                <div class="content-column bottom-column">
-                                    <p class="project-description">
-                                        This website was a group project doing my Web Development bachelor degree. 
-                                        The goal was to create a booking solution, to book study rooms at our school.<br>
-                                        Originally, it was built using MySQL, PHP, JavaScript. Since then,
-                                        I have rebuilt it with Spring Boot and React as these technologies are more widely used.<br>
-                                        If you want to check it out, you can clone the project from my Github using the button below.
-                                    </p>
-                                    <a class="button" href="https://github.com/MarBProduction/eaaa-booking-project" target="_blank">Check it out!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- <section class="slides" id="slide2">
-                        <div class="content-contain">
-                            <h3>Mobile Game: Bloyn</h3>
-                            <div class="column-flex">
-                                <div class="content-column">
-                                    <img class="preview-img" src="img/bloyn-cut-out.jpg" alt="">
-                                    <p class="keywords">
-                                        Game Design - Graphic Design - UX Design
-                                    </p>
-                                </div>
-                                <div class="content-column bottom-column">
-                                    <p class="project-description">
-                                        Doing my Higher Technical Exam education (HTX), which is 
-                                        similar to the level of a Senior High School in USA, 
-                                        we were on a school trip to Seattle in autumn 2016. 
-                                        The trip lasted for a month and doing that trip we were 
-                                        tasked in groups to make a game. This is how the 
-                                        mobile game Bloyn started development. That later would 
-                                        be released on Google Store.
-                                    </p>
-                                    <a class="button" href="" target="_blank">Check it out!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section> -->
-
-                    <section class="slides" id="slide3">
-                        <div class="content-contain">
-                            <h3>Bonus video: Gamification</h3>
-                            <div class="column-flex">
-                                <div class="content-column">
-                                    <div id="video-contain">
-                                        <iframe id="video" src="https://www.youtube.com/embed/_v5Yw6rfI0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p id="disclaimer" class="project-description">
-                                            Disclaimer: The video is in danish, but might still be worth 
-                                            a watch, even if you do not understand danish
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content-column">
-                                    <p class="project-description">
-                                        Doing my 2. semester of my Multimedia Design education, 
-                                        we were tasked to make a video, where we should present 
-                                        a topic. The topic I chose was Gamification, which is using 
-                                        video game elements in your products to keep the user engaged.
-                                        <br><br>
-                                        This video took a little less than a week to make and got 
-                                        a lot of praise from my classmates as well as my teacher, 
-                                        who all found the video entertaining and funny. So, the 
-                                        video has made it into my portfolio, since it shows a bit 
-                                        of my personality, humour, and my skills as a presenter and 
-                                        video editor. Enjoy.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          <!-- <section class="slides" id="slide2">
+            <div class="content-contain">
+              <h3>Mobile Game: Bloyn</h3>
+              <div class="column-flex">
+                <div class="content-column">
+                  <img class="preview-img" src="img/bloyn-cut-out.jpg" alt="">
+                  <p class="keywords">
+                    Game Design - Graphic Design - UX Design
+                  </p>
                 </div>
+                <div class="content-column bottom-column">
+                  <p class="project-description">
+                    Doing my Higher Technical Exam education (HTX), which is 
+                    similar to the level of a Senior High School in USA, 
+                    we were on a school trip to Seattle in autumn 2016. 
+                    The trip lasted for a month and doing that trip we were 
+                    tasked in groups to make a game. This is how the 
+                    mobile game Bloyn started development. That later would 
+                    be released on Google Store.
+                  </p>
+                  <a class="button" href="" target="_blank">Check it out!</a>
+                </div>
+              </div>
             </div>
-        </article>
+          </section> -->
 
-        <article id="about-me" class="pages">
-            <h2>About Me</h2>
-            <div id="about-me-content-contain">
-                <section id="about-me-text">
-                    <p>
-                        I have always been interested in the digital world,
-                        and the endeless ways to make everyday life easier and more entertaining.
+          <section class="slides" id="slide3">
+            <div class="content-contain">
+              <h3>Bonus video: Gamification</h3>
+              <div class="column-flex">
+                <div class="content-column">
+                  <div id="video-contain">
+                    <iframe id="video" src="https://www.youtube.com/embed/_v5Yw6rfI0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p id="disclaimer" class="project-description">
+                      Disclaimer: The video is in danish, but might still be worth 
+                      a watch, even if you do not understand danish
                     </p>
-                    <p>
-                        First, I tried my hands on the art of graphic design, 
-                        but those hands were not cooperating. Then doing my 
-                        Multimedia Design education I focused on the coding, 
-                        which worked better for me, as I started to enjoy it more and more,
-                        it just feels great to make ideas come to life.
-                    </p>
-                    <p>
-                        The more I learn, the more I want to know, 
-                        as I realize just how much more I have yet to learn.
-                        I love diving into topics, and try to understand what happens 
-                        behind the scenes. Because I learn the best when I can draw 
-                        from the experiences of others and try it out myself.
-                        For the same reasons, I love to share my knowledge with others,
-                        when working in a team.
-                    </p>
-                    <p>
-                        I am a detail-oriented and dedicated worker, who try to make everything right.
-                        If the solution is not smooth and easy to understand for the consumer,
-                        it can be improved. 
-                        So, if you want someone who takes thier job serious, with a good work ehtic, 
-                        but still have time for fun, let us get in touch.
-                    </p>
-                </section>
-                <section id="about-me-icons">
-                    <div id="spare-time">
-                        <h3>My spare time:</h3>
-                        <div id="spare-time-flex">
-                            <div class="spare-time-visual">
-                                <img src="img/golf-illustration.png" alt="">
-                                <p>Golf</p>
-                            </div>
-                            <div class="spare-time-visual">
-                                <img src="img/games-illustration.png" alt="">
-                                <p>Video Games</p>
-                            </div>
-                            <div class="spare-time-visual">
-                                <img src="img/computer-illustration.png" alt="">
-                                <p>Computer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="hard-skills">
-                        <h3>I have experience with:</h3>
-                        <div>
-                            <div class="hard-skills-icons">
-                                <img src="img/photoshop-icon.png" alt="Adobe Photoshop">
-                                <img src="img/illustrator-icon.png" alt="Adobe Illustrator">
-                                <img src="img/xd-icon.png" alt="Adobe XD">
-                                <img src="img/premier-pro-icon.png" alt="Adobe Premier Pro">
-                                <img src="img/word-icon.png" alt="Microsoft Office Word">
-                                <img src="img/power-point-icon.png" alt="Microsoft Office PowerPoint">
-                                <img src="img/excel-icon.png" alt="Microsoft Office Excel">
-                                <img src="img/publisher-icon.png" alt="Microsoft Office Publisher">
-                                <img src="img/figma-logo.webp" alt="Figma">
-                            </div>
-                            <div class="hard-skills-icons">
-                                <img src="img/html-icon.png" alt="HTML">
-                                <img src="img/css-icon.png" alt="CSS">
-                                <img src="img/java-script-icon.png" alt="JavaScript">
-                                <img src="img/c-sharp-icon.png" alt="C Sharp">
-                                <img class="wide-logo" src="img/php-logo.svg" alt="PHP">
-                                <img src="img/unity-icon.png" alt="Unity Engine">
-                                <img class="wide-logo" src="img/mysql-logo.png" alt="My SQL">
-                                <img src="img/react-logo.svg" alt="React">
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                  </div>
+                </div>
+                <div class="content-column">
+                  <p class="project-description">
+                    Doing my 2. semester of my Multimedia Design education, 
+                    we were tasked to make a video, where we should present 
+                    a topic. The topic I chose was Gamification, which is using 
+                    video game elements in your products to keep the user engaged.
+                    <br><br>
+                    This video took a little less than a week to make and got 
+                    a lot of praise from my classmates as well as my teacher, 
+                    who all found the video entertaining and funny. So, the 
+                    video has made it into my portfolio, since it shows a bit 
+                    of my personality, humour, and my skills as a presenter and 
+                    video editor. Enjoy.
+                  </p>
+                </div>
+              </div>
             </div>
-        </article>
+          </section>
+        </div>
+      </div>
+    </article>
 
-        <article id="contact" class="pages">
-            <h2>Contact</h2>
-            <div id="contact-content-contain">
-                <section id="contact-information">
-                    <p>martinboesen@hotmail.com</p>
-                    <p>+45 3055 9185</p>
-                </section>
-                <section id="testimonials">
-                    <h3>What other people say about me</h3>
-                    <div id="testimonials-flex">
-                        <div class="testimonials-content">
-                            <img src="img/quotes-icon.png" alt="">
-                            <p>
-                                Lige nu er du stærkest i kodningen og du har også medbragt ret 
-                                fine skitser. Jeg tror du kan blive stærk i lige det du har 
-                                lyst til.
-                            </p>
-                        </div>
-                        <div class="testimonials-content">
-                            <img src="img/quotes-icon.png" alt="">
-                            <p>
-                                Du er kreativ,
-                                dygtig programmør,
-                                selvstændig.
-                            </p>
-                        </div>
-                        <div class="testimonials-content">
-                            <img src="img/quotes-icon.png" alt="">
-                            <p>
-                                Du er dygtig til det du laver. Du er god til at lære fra dig. 
-                                Du er god til at få sjove ideer og skitsere den gennem prototyping.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+    <article id="about-me" class="pages">
+      <h2>About Me</h2>
+      <div id="about-me-content-contain">
+        <section id="about-me-text">
+          <p>
+            I have always been interested in the digital world,
+            and the endeless ways to make everyday life easier and more entertaining.
+          </p>
+          <p>
+            First, I tried my hands on the art of graphic design, 
+            but those hands were not cooperating. Then doing my 
+            Multimedia Design education I focused on the coding, 
+            which worked better for me, as I started to enjoy it more and more,
+            it just feels great to make ideas come to life.
+          </p>
+          <p>
+            The more I learn, the more I want to know, 
+            as I realize just how much more I have yet to learn.
+            I love diving into topics, and try to understand what happens 
+            behind the scenes. Because I learn the best when I can draw 
+            from the experiences of others and try it out myself.
+            For the same reasons, I love to share my knowledge with others,
+            when working in a team.
+          </p>
+          <p>
+            I am a detail-oriented and dedicated worker, who try to make everything right.
+            If the solution is not smooth and easy to understand for the consumer,
+            it can be improved. 
+            So, if you want someone who takes thier job serious, with a good work ehtic, 
+            but still have time for fun, let us get in touch.
+          </p>
+        </section>
+        <section id="about-me-icons">
+          <div id="spare-time">
+            <h3>My spare time:</h3>
+            <div id="spare-time-flex">
+              <div class="spare-time-visual">
+                <img src="img/golf-illustration.png" alt="">
+                <p>Golf</p>
+              </div>
+              <div class="spare-time-visual">
+                <img src="img/games-illustration.png" alt="">
+                <p>Video Games</p>
+              </div>
+              <div class="spare-time-visual">
+                <img src="img/computer-illustration.png" alt="">
+                <p>Computer</p>
+              </div>
             </div>
-        </article>
-        
-    </main>
-   
+          </div>
+          <div id="hard-skills">
+            <h3>I have experience with:</h3>
+            <div>
+              <div class="hard-skills-icons">
+                <img src="img/photoshop-icon.png" alt="Adobe Photoshop">
+                <img src="img/illustrator-icon.png" alt="Adobe Illustrator">
+                <img src="img/xd-icon.png" alt="Adobe XD">
+                <img src="img/premier-pro-icon.png" alt="Adobe Premier Pro">
+                <img src="img/word-icon.png" alt="Microsoft Office Word">
+                <img src="img/power-point-icon.png" alt="Microsoft Office PowerPoint">
+                <img src="img/excel-icon.png" alt="Microsoft Office Excel">
+                <img src="img/publisher-icon.png" alt="Microsoft Office Publisher">
+                <img src="img/figma-logo.webp" alt="Figma">
+              </div>
+              <div class="hard-skills-icons">
+                <img src="img/html-icon.png" alt="HTML">
+                <img src="img/css-icon.png" alt="CSS">
+                <img src="img/java-script-icon.png" alt="JavaScript">
+                <img src="img/c-sharp-icon.png" alt="C Sharp">
+                <img class="wide-logo" src="img/php-logo.svg" alt="PHP">
+                <img src="img/unity-icon.png" alt="Unity Engine">
+                <img class="wide-logo" src="img/mysql-logo.png" alt="My SQL">
+                <img src="img/react-logo.svg" alt="React">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
 
-    <footer id="footer">
+    <article id="contact" class="pages">
+      <h2>Contact</h2>
+      <div id="contact-content-contain">
+        <section id="contact-information">
+          <p>martinboesen@hotmail.com</p>
+          <p>+45 3055 9185</p>
+        </section>
+        <section id="testimonials">
+          <h3>What other people say about me</h3>
+          <div id="testimonials-flex">
+            <div class="testimonials-content">
+              <img src="img/quotes-icon.png" alt="">
+              <p>
+                Lige nu er du stærkest i kodningen og du har også medbragt ret 
+                fine skitser. Jeg tror du kan blive stærk i lige det du har 
+                lyst til.
+              </p>
+            </div>
+            <div class="testimonials-content">
+              <img src="img/quotes-icon.png" alt="">
+              <p>
+                Du er kreativ,
+                dygtig programmør,
+                selvstændig.
+              </p>
+            </div>
+            <div class="testimonials-content">
+              <img src="img/quotes-icon.png" alt="">
+              <p>
+                Du er dygtig til det du laver. Du er god til at lære fra dig. 
+                Du er god til at få sjove ideer og skitsere den gennem prototyping.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
 
-    </footer>
+  <footer id="footer">
+  </footer>
 
-    <script src="js/js.js"></script>
+  <script src="js/js.js"></script>
 
 </body>
 
