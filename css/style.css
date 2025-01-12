@@ -1,3 +1,11 @@
+:root {
+    --purple: #8731de;
+    --dark-purple: #511191;
+    --light-purple: #a852ff;
+    --yellow: #8F9103;
+    --light-yellow: #DBDE31;
+}
+
 body {
     font: 16px Arial, sans-serif;
     background-color: black;
@@ -73,7 +81,7 @@ body {
     font-size: 1.8em;
     margin: 15px auto;
     padding: 10px;
-    background-color: #8731de;
+    background-color: var(--purple);
     max-width: 400px;
 }
 
@@ -91,7 +99,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    border-bottom: solid 5px #511191;
+    border-bottom: solid 5px var(--dark-purple);
     padding-bottom: 20px;
 }
 
@@ -207,7 +215,7 @@ h2 {
 }
 #disclaimer {
     margin-top: 1em;
-    color: #dbde31;
+    color: var(--light-yellow);
 }
 
 .keywords {
@@ -233,19 +241,19 @@ h2 {
     color: white;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #8F9103;
-    border: solid 5px #DBDE31;
-    box-shadow: 8px 8px 5px #DBDE31;
+    background-color: var(--yellow);
+    border: solid 5px var(--light-yellow);
+    box-shadow: 8px 8px 5px var(--light-yellow);
     border-radius: 50px;
     text-align: center;
     max-width: 260px;
     margin: 1em auto;
 }
 .button:hover {
-    background-color: #DBDE31;
+    background-color: var(--light-yellow);
 }
 .button:active {
-    background-color: #DBDE31;
+    background-color: var(--light-yellow);
     box-shadow: none;
     transform: translate(8px, 8px);
 }
@@ -322,7 +330,7 @@ h2 {
     width: 90%;
     margin: 2em auto;
     background-color: rgba(135, 49, 222, 0.5);
-    border: solid 10px #a852ff;
+    border: solid 10px var(--light-purple);
 }
 #contact-information p {
     font-size: 1.2em;
@@ -532,7 +540,7 @@ h2 {
         align-self: center;
     }
     #right-nav a:hover {
-        color: #dbde31;
+        color: var(--light-yellow);
     }
 
 
@@ -623,7 +631,7 @@ h2 {
         margin: 0 10px;
     }
     #project-links a:hover {
-        color: #dbde31;
+        color: var(--light-yellow);
     }
 
     #slide-arrow-flex {
@@ -708,10 +716,10 @@ h2 {
         padding: 15px;
     }
     .button:hover {
-        background-color: #DBDE31;
+        background-color: var(--light-yellow);
     }
     .button:active {
-        background-color: #DBDE31;
+        background-color: var(--light-yellow);
         box-shadow: none;
         transform: translate(8px, 8px);
     }
