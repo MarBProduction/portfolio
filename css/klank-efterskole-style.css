@@ -1,0 +1,177 @@
+
+body {
+	font: 16px Arial, sans-serif;
+	background-image: url(../img/wall-texture-20opacity.png);
+	background-size: contain;
+}
+
+#wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 100px 10px;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    width: 100%;
+    padding: 5px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(135, 49, 222, 0.45);
+}
+
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img {
+    height: 60px;
+}
+
+#right-nav {
+    display: none;
+}
+
+#burger-icon {
+    height: 60px;
+    margin-right: 30px;
+}
+#burger-icon img {
+    height: 100%;
+}
+
+#dropdown-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #8731de;
+    max-width: 400px;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+    
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0.8em;
+}
+
+#content img {
+	width: 100%;
+}
+
+video {
+	width: 100%;
+}
+
+#wrapper a {
+	display: block;
+	max-width: 400px;
+	text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #8F9103;
+    border: solid 5px #DBDE31;
+    box-shadow: 8px 8px 5px #DBDE31;
+    border-radius: 50px;
+    margin: 50px auto;
+}
+#wrapper a:hover {
+    background-color: #DBDE31;
+}
+#wrapper a:active {
+    box-shadow: none;
+    transform: translate(8px, 8px);
+}
+
+#intro-text {
+	font-size: 1.2em;
+	font-weight: bold;
+	border-bottom: solid 2px #000;
+	padding-bottom: 0.5em;
+}
+
+#project-info {
+	color: #424242;
+}
+#project-info p {
+	margin: 0.5em 0;
+}
+
+.section {
+	margin: 50px 0;
+	padding: 10px;
+	background-color: white;
+    box-shadow: 0px 0px 15px #000;
+}
+.section h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.section p {
+	margin: 1.5em 0;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+}
+
+
+
+/* MEDIA START ---------------------------------------------------------------------*/
+
+
+
+@media only screen and (min-width: 600px) {
+	
+	h1 {
+		font-size: 3em;
+	}
+	
+	#project-info {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section {
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+    
+    #burger-icon, #dropdown-menu {
+        display: none;
+    }
+
+    #right-nav {
+        display: flex;
+    }
+    #right-nav a {
+        font-size: 1.7em;
+        color: #fff;
+        margin: 0 40px;
+        text-decoration: none;
+        align-self: center;
+    }
+    #right-nav a:hover {
+        color: #dbde31;
+    }
+}
