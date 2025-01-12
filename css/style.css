@@ -331,6 +331,15 @@ h2 {
     margin: 1.5em 0;
 }
 
+#social-media {
+    display: flex;
+    justify-content: center;
+}
+#social-media img {
+    width: 40px;
+    margin: 10px;
+}
+
 #testimonials {
 }
 #testimonials h3 {
@@ -396,6 +405,10 @@ h2 {
 
     #contact-information p {
         font-size: 1.4em;
+    }
+
+    #social-media img {
+        width: 50px;
     }
 
     #testimonials h3 {
