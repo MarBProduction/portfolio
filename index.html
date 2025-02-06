@@ -142,6 +142,7 @@
     </article>
 
     <article id="about-me" class="pages">
+      
       <h2>About Me</h2>
       <div class="isolated-scroll">
         <div class="page-overflow">
@@ -232,6 +233,7 @@
         <p class="slide-arrow-text">Swipe for more projects</p>
         <img class="slide-arrows" id="slide-right" src="img/right-arrow.png" alt="One slide to the right">
       </div>
+      
     </article>
 
     <article id="contact" class="pages">
@@ -279,13 +281,13 @@
         </div>
       </div>
     </article>
-    
-    <nav id="menu-mobile">
-      <a href="#projects" class="main-active">Projects</a>
-      <a href="#about-me">About me</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </main>
+  
+  <nav id="menu-mobile">
+    <div onclick="changePage(event, 'projects')">Projects</div>
+    <div onclick="changePage(event, 'about-me')">About me</div>
+    <div onclick="changePage(event, 'contact')">Contact</div>
+  </nav>
 
   <footer id="footer">
   </footer>
