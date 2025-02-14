@@ -197,9 +197,24 @@ h2 {
 .slide-arrow:hover {
     background-color: var(--light-yellow-50);
 }
-.sub-menu-text {
-    align-self: center;
-    font-size: 1.2em;
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.dot {
+    padding: 10px;
+    cursor: pointer;
+}
+.inner-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--light-yellow-50);
+    border-radius: 50%;
+}
+.active-dot .inner-dot {
+    background: var(--yellow);
 }
 .arrow-left {
     -webkit-transform: scaleX(-1);

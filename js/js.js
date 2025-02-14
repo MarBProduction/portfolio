@@ -3,21 +3,44 @@ document.addEventListener("DOMContentLoaded", function () {
   const pages = document.querySelectorAll(".pages")
 
   /* ---------- CHANGE SLIDE ---------- */
-  pages.forEach(page => {
+  pages.forEach((page, i) => {
+    if (!page.querySelector(".sub-menu")) {
+      return
+    }
+
     const slider = page.querySelector(".slider-container")
     const rightArrow = page.querySelector(".arrow-right")
     const leftArrow = page.querySelector(".arrow-left")
-    const scrollAmount = slider.clientWidth
+    const pagination = document.querySelectorAll(".pagination")[i]
+    const slideWidth = slider.clientWidth
+    const slideAmount = page.querySelectorAll(".slides").length
 
-    if (rightArrow && leftArrow) {
-      rightArrow.addEventListener("click", () => {
-        slider.scrollBy({left: scrollAmount, behavior: "smooth"})
+    for (let i = 0; i < slideAmount; i++) {
+      const dot = document.createElement("div")
+      dot.innerHTML = `<div class="inner-dot"></div>`
+      dot.classList.add("dot")
+      if (i === 0) dot.classList.add("active-dot");
+      dot.addEventListener("click", () => {
+        slider.scrollTo({ left: i * slideWidth, behavior: "smooth"})
       })
-
-      leftArrow.addEventListener("click", () => {
-        slider.scrollBy({left: -scrollAmount, behavior: "smooth"})
-      })
+      pagination.appendChild(dot)
     }
+
+    rightArrow.addEventListener("click", () => {
+      slider.scrollBy({left: slideWidth, behavior: "smooth"})
+    })
+
+    leftArrow.addEventListener("click", () => {
+      slider.scrollBy({left: -slideWidth, behavior: "smooth"})
+    })
+
+    const dots = pagination.querySelectorAll(".dot")
+
+    slider.addEventListener("scroll", () => {      
+      const currentIndex = Math.round(slider.scrollLeft / slideWidth)
+      dots.forEach(dot => dot.classList.remove("active-dot"))
+      dots[currentIndex].classList.add("active-dot")
+    })
   })
 
 
