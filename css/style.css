@@ -2,6 +2,7 @@
     --purple: #8731de;
     --dark-purple: #511191;
     --light-purple: #a852ff;
+    --light-purple-50: rgb(168, 82, 255, 0.5);
     --yellow: #8F9103;
     --light-yellow: #DBDE31;
     --light-yellow-50: rgb(219, 222, 49, 0.5);
@@ -63,11 +64,11 @@ body {
     z-index: 100;
     background-color: var(--light-purple);
     text-align: center;
-    margin-bottom: 10px;
 }
 
-#logo img {
+#logo {
     height: 40px;
+    cursor: pointer;
 }
 
 /* Navigation
@@ -105,24 +106,7 @@ body {
 #content{
     display: flex;
     flex-direction: column;
-    height: calc(100% - 53px - 42px);
-}
-
-#top {
-    background-image: url(../img/mobile-top-section-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    border-bottom: solid 5px var(--dark-purple);
-    padding-bottom: 20px;
-
-    display: none; /*TODO delete when fixed the design*/
-}
-
-h1 {
-    padding-top: 80px;
-    text-align: center;
-    font-size: 2em;
+    height: calc(100% - 43px - 42px); /*TODO make a better solution*/
 }
 
 h2 {
@@ -131,19 +115,12 @@ h2 {
     text-align: center;
     width: 100%;
 }
-#top-h2 {
-    display: none;
-}
-
-#top-img img {
-    width: 100%;
-    max-width: 500px;
-}
 
 .pages {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-top: 10px;
 }
 
 .slider-container {
@@ -219,6 +196,62 @@ h2 {
 .arrow-left {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+/* Home
+-----------------------------------------------------------------------------*/
+#home {
+    padding: 0;
+}
+
+#top-wrapper {
+    width: 100%;
+    background-color: var(--light-light-grey);
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding: 10px 10px 40px 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+#profile-picture {
+    width: 180px;
+    margin: 20px 0;
+    border-radius: 50%;
+}
+
+#job-roles-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.job-role {
+    width: calc((100vw - 60px) / 3);
+    padding: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: var(--dark-purple);
+    background-color: var(--light-purple-50);
+    border-radius: 5px;
+}
+#job-role-common-denominator {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--dark-purple);
+    margin-top: 15px;
+}
+
+#quote-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    font-size: 1.6em;
+    color: var(--yellow);
+    font-style: italic;
+    text-align: center;
 }
 
 /* Projects
@@ -440,7 +473,7 @@ h2 {
 
 
     
-    #top {
+    #home {
         background-image: url(../img/mobile-top-section-background-600px.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
@@ -542,14 +575,13 @@ h2 {
         position: relative;
     }
 
-    .top-page
     .pages {
         height: 100%;
         /*scroll-snap-align: center;*/
         padding-top: 80px;
     }
 
-    #top {
+    #home {
         padding-bottom: 0;
 
         background-color: black;
@@ -574,7 +606,7 @@ h2 {
         margin: 0;
         font-size: 2em;
     }
-    #top-h2 {
+    #home-h2 {
         display: block;
         text-align: center;
         position: absolute;
@@ -582,11 +614,11 @@ h2 {
         font-size: 3em;
     }
 
-    #top-img {
+    #home-img {
         align-self: flex-end;
         width: 100%;
     }
-    #top-img img {
+    #home-img img {
         max-width: 1500px;
     }
     

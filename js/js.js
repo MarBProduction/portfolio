@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const pages = document.querySelectorAll(".pages")
 
   /* ---------- CHANGE SLIDE ---------- */
-  pages.forEach((page, i) => {
+  pages.forEach(page => {
     if (!page.querySelector(".sub-menu")) {
       return
     }
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = page.querySelector(".slider-container")
     const rightArrow = page.querySelector(".arrow-right")
     const leftArrow = page.querySelector(".arrow-left")
-    const pagination = document.querySelectorAll(".pagination")[i]
+    const pagination = page.querySelector(".pagination")
     const slideWidth = slider.clientWidth
     const slideAmount = page.querySelectorAll(".slides").length
 
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- SWITCH PAGE ---------- */
   const menuButtonMobile = document.querySelectorAll("#menu-mobile div")
+  const homeButtonMobile = document.querySelector("#logo")
 
   function changePage(e, pageId){
     pages.forEach(page => {
@@ -59,11 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
     menuButtonMobile.forEach(menuButton => {
       menuButton.classList.remove("main-active")
     })
-    e.target.classList.add("main-active")
+    
+    if(e.target.id != "home")e.target.classList.add("main-active")
   }
 
   pages.forEach(page => {
     page.style.display = "none"
+  })
+  homeButtonMobile.addEventListener("click", (event) => {
+    changePage(event, "home")
   })
   menuButtonMobile.forEach(menuButton => {
     switch (menuButton.id) {
@@ -89,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
     }
   })
-  pages[1].style.display = "flex" //TODO delete later, when new top is made
-  menuButtonMobile[1].classList.add("main-active") //TODO delete later, when new top is made
+  pages[0].style.display = "flex"
 
 });
