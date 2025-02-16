@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const pages = document.querySelectorAll(".pages")
+  let windowWidth = window.innerWidth
+  window.addEventListener("resize", () => {
+    windowWidth = window.innerWidth
+  })
+  
 
   /* ---------- CHANGE SLIDE ---------- */
   pages.forEach(page => {
@@ -12,32 +17,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightArrow = page.querySelector(".arrow-right")
     const leftArrow = page.querySelector(".arrow-left")
     const pagination = page.querySelector(".pagination")
-    const slideWidth = slider.clientWidth
     const slideAmount = page.querySelectorAll(".slides").length
-
+    
     for (let i = 0; i < slideAmount; i++) {
       const dot = document.createElement("div")
       dot.innerHTML = `<div class="inner-dot"></div>`
       dot.classList.add("dot")
       if (i === 0) dot.classList.add("active-dot");
       dot.addEventListener("click", () => {
-        slider.scrollTo({ left: i * slideWidth, behavior: "smooth"})
+        slider.scrollTo({ left: i * windowWidth, behavior: "smooth"})
       })
       pagination.appendChild(dot)
     }
 
     rightArrow.addEventListener("click", () => {
-      slider.scrollBy({left: slideWidth, behavior: "smooth"})
+      slider.scrollBy({left: windowWidth, behavior: "smooth"})
     })
 
     leftArrow.addEventListener("click", () => {
-      slider.scrollBy({left: -slideWidth, behavior: "smooth"})
+      slider.scrollBy({left: -windowWidth, behavior: "smooth"})
     })
 
     const dots = pagination.querySelectorAll(".dot")
 
     slider.addEventListener("scroll", () => {      
-      const currentIndex = Math.round(slider.scrollLeft / slideWidth)
+      const currentIndex = Math.round(slider.scrollLeft / windowWidth)
       dots.forEach(dot => dot.classList.remove("active-dot"))
       dots[currentIndex].classList.add("active-dot")
     })
