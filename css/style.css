@@ -1,4 +1,5 @@
 :root {
+    --background: #f7f7f7;
     --purple: #8731de;
     --dark-purple: #511191;
     --light-purple: #a852ff;
@@ -12,6 +13,7 @@
     --text-black: #202020;
     --text-light-grey: #949494;
     --shadow: rgb(0, 0, 0, 0.5);
+    --white: #ffffff;
 }
 
 * {
@@ -24,7 +26,7 @@ body {
     height: 100vh;
     flex: 1;
     font: 14px Arial, sans-serif;
-    background-color: white;
+    background-color: var(--white);
     color: var(--text-black);
 }
 
@@ -81,7 +83,7 @@ body {
     display: flex;
     width: 100%;
     text-align: center;
-    background-color: white;
+    background-color: var(--white);
 }
 #menu-mobile div{
     color: var(--text-heading-black);
@@ -98,6 +100,7 @@ body {
     border-right: solid 1px var(--light-grey);
     border-bottom: solid 1px var(--light-grey);
     border-left: solid 1px var(--light-grey);
+    background-color: var(--background);
 }
 
 
@@ -120,7 +123,8 @@ h2 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-top: 10px;
+    padding-top: 20px;
+    background-color: var(--background);
 }
 
 .slider-container {
@@ -145,13 +149,14 @@ h2 {
 
 .content-contain {
     width: 100%;
-    box-shadow: 0px 2px 4px var(--shadow);
+    box-shadow: 0px 1px 2px var(--shadow);
     border-radius: 5px;
     margin: 0 auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    background-color: var(--white);
 }
 .content-contain h3 {
     font-size: 1.4em;
@@ -202,6 +207,7 @@ h2 {
 -----------------------------------------------------------------------------*/
 #home {
     padding: 0;
+    background-color: var(--white);
 }
 
 #background-shape {
@@ -374,37 +380,78 @@ h1 {
 /* Contact
 -----------------------------------------------------------------------------*/
 #contact-information {
-    width: 90%;
-    margin: 2em auto;
+    width: 250px;
+    margin: 0 auto 30px;
+    background-color: var(--light-yellow-50);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px var(--shadow);
 }
 #contact-information p {
     font-size: 1.2em;
-    font-weight: bold;
     text-align: center;
-    margin: 1.5em 0;
+    margin-bottom: 20px;
 }
 
 #social-media {
     display: flex;
     justify-content: center;
 }
+#social-media a {
+    margin: 0 15px;
+}
 #social-media img {
-    width: 40px;
-    margin: 10px;
+    width: 30px;
 }
 
 #testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.testimonials-content {
-    width: 90%;
-    margin: 1em auto;
+.testimonial-content {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: var(--light-light-grey);
+    border-radius: 5px;
+    padding: 10px;
 }
-.testimonials-content img {
+
+.testimonial-company,
+.testimonial-person {
+    display: flex;
+}
+
+.testimonial-company img {
+    width: 30px;
+    border-radius: 5px;
+}
+.testimonial-company p {
+    font-weight: bold;
+    margin: auto 0 auto 10px;
+}
+
+.testimonial-description{
+    margin: 15px 0 35px;
+}
+.testimonial-description img {
+    height: 1em;
+}
+
+.testimonial-person img {
     width: 40px;
+    border-radius: 5px;
 }
-.testimonials-content p {
-    text-align: center;
+.testimonial-person-name-role {
+    margin: auto 0 auto 10px;
+}
+.testimonial-person-name {
+    font-weight: bold;
+}
+.testimonial-person-role {
+    font-size: 0.8em;
 }
 
 /* Footer
@@ -459,7 +506,7 @@ h1 {
         width: 50px;
     }
 
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1.2em;
     }
 
@@ -523,14 +570,14 @@ h1 {
         font-size: 1.8em;
     }
 
-    .testimonials-content {
+    .testimonial-content {
         width: 80%;
         margin: 1.5em auto;
     }
-    .testimonials-content img {
+    .testimonial-content img {
         width: 60px;
     }
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1.4em;
     }
 
@@ -832,19 +879,19 @@ h1 {
         margin: 1em 0;
     }
     
-    #testimonials-flex {
+    #testimonials {
         display: flex;
         justify-content: space-around;
     }
     
-    .testimonials-content {
+    .testimonial-content {
         margin: 1em;
         width: 30%;
     }
-    .testimonials-content img {
+    .testimonial-content img {
         width: 40px;
     }
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1em;
     }
 
@@ -914,10 +961,10 @@ h1 {
     #contact-information p {
         font-size: 1.6em;
     }
-    .testimonials-content img {
+    .testimonial-content img {
         width: 50px;
     }
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1.2em;
     }
 
@@ -992,10 +1039,10 @@ h1 {
         font-size: 2em;
     }
 
-    .testimonials-content img {
+    .testimonial-content img {
         width: 60px;
     }
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1.5em;
     }
 
@@ -1026,7 +1073,7 @@ h1 {
         font-size: 2.5em;
     }
 
-    .testimonials-content {
+    .testimonial-content {
         max-width: 380px;
     }
 
@@ -1082,10 +1129,10 @@ h1 {
         font-size: 2.4em;
     }
 
-    .testimonials-content img {
+    .testimonial-content img {
         width: 70px;
     }
-    .testimonials-content p {
+    .testimonial-content p {
         font-size: 1.8em;
     }
 }
