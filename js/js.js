@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const pages = document.querySelectorAll(".pages")
-  let windowWidth = window.innerWidth
+  let contentWidth = window.innerWidth > 1200 ? 1200 : window.innerWidth
   window.addEventListener("resize", () => {
-    windowWidth = window.innerWidth
+    contentWidth = window.innerWidth > 1200 ? 1200 : window.innerWidth
+
+    //TODO
+    /* if (contentWidth > (Number in pixels) {
+      switchMenu('desktop')
+    } else {
+      switchMenu('mobile')
+    } */
   })
   
 
@@ -14,34 +21,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const slider = page.querySelector(".slider-container")
+    const slides = page.querySelectorAll(".slides")
+    const slideAmount = slides.length
+    const subMenuDesktop = page.querySelector(".sub-menu-desktop")
     const rightArrow = page.querySelector(".arrow-right")
     const leftArrow = page.querySelector(".arrow-left")
     const pagination = page.querySelector(".pagination")
-    const slideAmount = page.querySelectorAll(".slides").length
-    
+
     for (let i = 0; i < slideAmount; i++) {
+      /* Desktop menu items */
+      const subMenuItem = document.createElement("div")
+      const slideTitle = slides[i].querySelector(".slide-title").innerHTML
+      subMenuItem.innerHTML = slideTitle
+      subMenuItem.classList.add("sub-menu-item")
+      if(i === 0) subMenuItem.classList.add("sub-menu-item-active")
+      subMenuItem.addEventListener("click", () => {
+        slider.scrollTo({ left: i * contentWidth, behavior: "smooth"})
+      })
+      subMenuDesktop.appendChild(subMenuItem)
+
+      /* Mobile pagination */
       const dot = document.createElement("div")
       dot.innerHTML = `<div class="inner-dot"></div>`
       dot.classList.add("dot")
       if (i === 0) dot.classList.add("active-dot");
       dot.addEventListener("click", () => {
-        slider.scrollTo({ left: i * windowWidth, behavior: "smooth"})
+        slider.scrollTo({ left: i * contentWidth, behavior: "smooth"})
       })
       pagination.appendChild(dot)
     }
 
+    /* Mobile slide arrows*/
     rightArrow.addEventListener("click", () => {
-      slider.scrollBy({left: windowWidth, behavior: "smooth"})
+      slider.scrollBy({left: contentWidth, behavior: "smooth"})
     })
-
     leftArrow.addEventListener("click", () => {
-      slider.scrollBy({left: -windowWidth, behavior: "smooth"})
+      slider.scrollBy({left: -contentWidth, behavior: "smooth"})
     })
 
     const dots = pagination.querySelectorAll(".dot")
+    const subMenuItems = subMenuDesktop.querySelectorAll(".sub-menu-item")
 
     slider.addEventListener("scroll", () => {      
-      const currentIndex = Math.round(slider.scrollLeft / windowWidth)
+      const currentIndex = Math.round(slider.scrollLeft / contentWidth)
+      /*Desktop menu itmes */
+      subMenuItems.forEach(subMenuItem => subMenuItem.classList.remove("sub-menu-item-active"))
+      subMenuItems[currentIndex].classList.add("sub-menu-item-active")
+      /*Mobile pagination */
       dots.forEach(dot => dot.classList.remove("active-dot"))
       dots[currentIndex].classList.add("active-dot")
     })
@@ -49,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* ---------- SWITCH PAGE ---------- */
-  const menuButtonMobile = document.querySelectorAll("#menu-mobile div")
   const homeButtonMobile = document.querySelector("#logo")
 
   function changePage(e, pageId){
@@ -61,11 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
       page.style.display = "none"
     })
 
-    menuButtonMobile.forEach(menuButton => {
-      menuButton.classList.remove("main-active")
+    document.querySelectorAll(".main-menu").forEach(menu => {
+      menu.querySelectorAll("div").forEach(menuButton => {
+        menuButton.classList.remove("main-active")
+      })
+      
+      if(e.target.id != "home")e.target.classList.add("main-active")
     })
-    
-    if(e.target.id != "home")e.target.classList.add("main-active")
   }
 
   pages.forEach(page => {
@@ -74,30 +101,35 @@ document.addEventListener("DOMContentLoaded", function () {
   homeButtonMobile.addEventListener("click", (event) => {
     changePage(event, "home")
   })
-  menuButtonMobile.forEach(menuButton => {
-    switch (menuButton.id) {
-      case "project-button":
-        menuButton.addEventListener("click", (event) => {
-          changePage(event, "projects")
-        })
-        break;
-      
-      case "about-me-button":
-        menuButton.addEventListener("click", (event) => {
-          changePage(event, "about-me")
-        })
-        break;
-      
-      case "contact-button":
-        menuButton.addEventListener("click", (event) => {
-          changePage(event, "contact")
-        })
-        break;
-    
-      default:
-        break;
-    }
+
+  document.querySelectorAll(".main-menu").forEach(menu => {
+    menu.querySelectorAll("div").forEach(menuButton => {
+      menuButton.classList.forEach(c => {
+        switch (c.valueOf()) {
+          case "project-button":
+            menuButton.addEventListener("click", (event) => {
+              changePage(event, "projects")
+            })
+            break;
+          
+          case "about-me-button":
+            menuButton.addEventListener("click", (event) => {
+              changePage(event, "about-me")
+            })
+            break;
+          
+          case "contact-button":
+            menuButton.addEventListener("click", (event) => {
+              changePage(event, "contact")
+            })
+            break;
+        
+          default:
+            break;
+        }
+      })
+    })
   })
-  pages[0].style.display = "flex"
+  pages[1].style.display = "flex"
 
 });
