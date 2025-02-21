@@ -130,6 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     })
   })
-  pages[1].style.display = "flex"
+  pages[0].style.display = "flex"
 
 });
