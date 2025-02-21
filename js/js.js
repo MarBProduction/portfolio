@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- SWITCH PAGE ---------- */
   const homeButtonMobile = document.querySelector("#logo")
+  const wrapperElement = document.querySelector("#wrapper")
 
   function changePage(e, pageId){
     pages.forEach(page => {
@@ -91,7 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
         menuButton.classList.remove("main-active")
       })
       
-      if(e.target.id != "home")e.target.classList.add("main-active")
+      if(e.target.id !== "logo") {
+        e.target.classList.add("main-active")
+        wrapperElement.style.display = "block"
+      } else {
+        wrapperElement.style.display = "none"
+      }
     })
   }
 
@@ -131,5 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
   pages[0].style.display = "flex"
+  wrapperElement.style.display = "none"
 
 });

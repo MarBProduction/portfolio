@@ -140,9 +140,16 @@ h2 {
 }
 .content-contain .slide-title {
     font-size: 1.4em;
-    margin-bottom: 0.5em;
+    margin-bottom: 15px;
     z-index: 5;
     text-align: center;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .sub-menu-desktop {
@@ -260,20 +267,24 @@ h1 {
 .preview-img {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto 1em;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-#video-contain {
-    text-align: center;
+#video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
 }
-#video {
-    width: 260px;
-    height: 146px;
-    margin: 0 auto;
-}
-#disclaimer {
-    margin-top: 1em;
-    color: var(--light-yellow);
+#video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .keywords {
@@ -281,14 +292,7 @@ h1 {
     font-style: italic;
     color: var(--text-light-grey);
     text-align: center;
-}
-
-.bottom-column {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
+    margin-top: 15px;
 }
 
 .project-description {
@@ -303,7 +307,7 @@ h1 {
     background-color: var(--light-yellow-50);
     border-radius: 5px;
     text-align: center;
-    max-width: 260px;
+    max-width: 130px;
     margin: 1em auto;
 }
 .button:hover {
@@ -466,6 +470,7 @@ h1 {
 
     .content-contain {
         padding: 30px;
+        overflow-y: auto;
     }
 
     #menu-mobile {
@@ -474,8 +479,11 @@ h1 {
 
     #menu-desktop {
         display: flex;
+        margin: 10px auto 0;
         margin-top: 10px;
         padding: 0 10px;
+        width: 100%;
+        max-width: 1200px;
     }
     #menu-desktop div {
         width: 100%;
@@ -537,29 +545,44 @@ h1 {
         padding: 30px;
     }
 
-    h1 {
-        /* font-size: 2em; */
-    }
-
     #profile-picture {
         width: 220px;
     }
     .job-role {
         width: calc((100% - 60px) / 3);
-        /* font-size: 1.4em; */
-    }
-    #job-role-common-denominator {
-        /* font-size: 1.8em; */
     }
 
     #quote-wrapper {
         margin: 0;
         height: 100%;
-        /* font-size: 2em; */
         padding-top: 60px;
         background-color: var(--white);
         border-top-right-radius: 50%;
         border-top-left-radius: 50%;
+    }
+
+
+    /* Projects */
+    .column-flex {
+        flex-direction: row;
+        gap: 20px;
+        min-height: 0;
+    }
+    .content-column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+    }
+
+    .project-description {
+        overflow-y: scroll;
+        margin: 0;
+    }
+
+    .button {
+        max-width: 170px;
+        margin-bottom: 0;
     }
 }
 
