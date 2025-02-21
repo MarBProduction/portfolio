@@ -81,7 +81,7 @@ body {
 /* Content
 -----------------------------------------------------------------------------*/
 #wrapper {
-    height: calc(100% - 40px); /*TODO make a better solution*/
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -90,7 +90,8 @@ body {
 #content{
     display: flex;
     flex-direction: column;
-    height: calc(100% - 43px); /*TODO make a better solution*/
+    height: 100%;
+    min-height: 0;
 }
 
 h2 {
@@ -135,7 +136,7 @@ h2 {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: var(--white);
 }
 .content-contain .slide-title {
@@ -143,13 +144,6 @@ h2 {
     margin-bottom: 15px;
     z-index: 5;
     text-align: center;
-}
-
-.content-column {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
 }
 
 .sub-menu-desktop {
@@ -258,12 +252,6 @@ h1 {
 
 /* Projects
 -----------------------------------------------------------------------------*/
-.column-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .preview-img {
     width: 100%;
     max-width: 500px;
@@ -272,6 +260,11 @@ h1 {
 }
 
 #video-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#video-content {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
@@ -279,7 +272,7 @@ h1 {
     width: 100%;
     border-radius: 10px;
 }
-#video-wrapper iframe {
+#video-content iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -296,7 +289,7 @@ h1 {
 }
 
 .project-description {
-    margin-top: 1em;
+    margin-top: 30px;
 }
 
 .button {
@@ -458,19 +451,16 @@ h1 {
 
     /* Content */
     #wrapper {
-        height: calc(100% - 50px); /*TODO make a better solution*/
-        width: 100%;
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    #content {
-        height: calc(100% - 54px); /*TODO make a better solution*/
+    .slides {
+        padding: 10px 150px;
     }
 
     .content-contain {
         padding: 30px;
-        overflow-y: auto;
     }
 
     #menu-mobile {
@@ -563,23 +553,6 @@ h1 {
 
 
     /* Projects */
-    .column-flex {
-        flex-direction: row;
-        gap: 20px;
-        min-height: 0;
-    }
-    .content-column {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        flex: 1;
-    }
-
-    .project-description {
-        overflow-y: scroll;
-        margin: 0;
-    }
-
     .button {
         max-width: 170px;
         margin-bottom: 0;
@@ -601,12 +574,6 @@ h1 {
     /* Header */
     #header {
         height: 60px;
-    }
-
-    
-    /* Content */
-    #wrapper {
-        height: calc(100% - 60px); /*TODO make a better solution*/
     }
 }
 
