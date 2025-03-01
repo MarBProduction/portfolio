@@ -1,16 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const pages = document.querySelectorAll(".pages")
-  let contentWidth = window.innerWidth > 1200 ? 1200 : window.innerWidth
+  let contentWidth = window.innerWidth > 1400 ? 1400 : window.innerWidth
   window.addEventListener("resize", () => {
-    contentWidth = window.innerWidth > 1200 ? 1200 : window.innerWidth
-
-    //TODO
-    /* if (contentWidth > (Number in pixels) {
-      switchMenu('desktop')
-    } else {
-      switchMenu('mobile')
-    } */
+    contentWidth = window.innerWidth > 1400 ? 1400 : window.innerWidth
   })
   
 

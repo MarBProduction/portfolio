@@ -49,26 +49,86 @@
         <article id="projects" class="pages">
           <h2>My Projects</h2>
           <div class="slider-container">
-            <section class="slides" id="slide1">
+            <section class="slides">
+              <div class="content-contain">
+                <h3 class="slide-title">Greenkeeper App - Ingenium Golf</h3>
+                <picture>
+                  <source class="preview-img" media="(min-width:800px)" srcset="img/greenkeeper-app-preview-img.png">
+                  <img class="preview-img" src="img/greenkeeper-app-preview-img-mobile.png" alt="Preview img">
+                </picture>
+                <p class="keywords">
+                  React Native - GraphQL - JavaScript - SQL
+                </p>
+                <a class="button" href="https://www.glfr.com/greenkeeper/" target="_blank">Check it out!</a>
+                <div class="project-description">
+                  <h4>The project</h4>
+                  <p>
+                    Maintaining a golf course requires a lot of work and is not easy, 
+                    it can be difficult to keep an overview of such a large area. 
+                    <br><br>
+                    As a team of golf enthusiasts, Ingenium Golf wanted to help make managing a golf course more manageable, 
+                    and that is how the idea for the Greenkeeper App originated.
+                    <br><br>
+                    Using the map component from one of their other products, 
+                    they provide greenkeepers with an interactive tool to log information about the golf course’s technology, 
+                    enabling them to record issues and pinpoint their exact location, making their work more efficient.
+                  </p>
+                  <h4>My contribution</h4>
+                  <p>
+                    As a golf enthusiast myself, I was lucky to work on this app, 
+                    and potentially contribute with improvements to a sport I enjoy so much.
+                    <br><br>
+                    My role was a full-stack developer, working mostly with the frontend. 
+                    I worked with React Native, utilizing Redux for state management, 
+                    while also contributing to the backend using GraphQL, JavaScript, and relational databases.
+                    <br><br>
+                    Aside from the interactive map, most of the frontend required a complete overhaul. 
+                    I was actively involved in the design process and independently implemented the new interface. 
+                    Additionally, I addressed various issues with the map, such as layering and coloring problems, 
+                    and introduced new features to enhance functionality.
+                    <br><br>
+                    This work was initially part of my 10-week internship, 
+                    which was later extended for an additional 10 weeks as part of my Bachelor’s project.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="slides">
               <div class="content-contain">
                 <h3 class="slide-title">Booking project</h3>
-                <!-- TODO change image -->
-                <img class="preview-img" src="img/booking-project-img.png" alt="">
+                <img class="preview-img" src="img/booking-project-preview-img.jpg" alt="Preview image">
                 <p class="keywords">
                   Spring Boot - React - HTML - CSS
                 </p>
                 <a class="button" href="https://github.com/MarBProduction/eaaa-booking-project" target="_blank">Check it out!</a>
-                <p class="project-description">
-                  This website was a group project doing my Web Development bachelor degree. 
-                  The goal was to create a booking solution, to book study rooms at our school.<br>
-                  Originally, it was built using MySQL, PHP, JavaScript. Since then,
-                  I have rebuilt it with Spring Boot and React as these technologies are more widely used.<br>
-                  If you want to check it out, you can clone the project from my Github using the button below.
-                </p>
+                <div class="project-description">
+                  <h4>The project</h4>
+                  <p>
+                    During my Bachelor's in Web Development, my group and I often struggled to find 
+                    available study rooms since they were almost always occupied when we needed them. 
+                    <br><br>
+                    So, when we got an assignment to develop a booking solution, we saw the perfect chance to tackle this problem. 
+                    Our idea was to create a booking system integrated into the school's website, 
+                    allowing students to reserve a room or at least check if one was available.
+                  </p>
+                  <h4>My contribution</h4>
+                  <p>
+                    Since this was a group project, we each focused on different aspects of the development. 
+                    My main contribution was creating an interactive floor plan of the school, 
+                    which used color coding to indicate room availability for a selected time span. 
+                    Clicking on a room provided details, including existing bookings for the chosen day, 
+                    and if it was available, students could book it.
+                    <br><br>
+                    I also took the lead on developing most of the backend API, as I had the strongest understanding of it. 
+                    The original project was built using PHP and JavaScript, but I later recreated it in React TypeScript 
+                    and the Java framework Spring Boot to align with more widely used industry technologies.
+                  </p>
+                </div>
               </div>
             </section>
 
-            <section class="slides" id="slide2">
+            <!-- <section class="slides">
               <div class="content-contain">
                 <h3 class="slide-title">Mobile Game: Bloyn</h3>
                 <img class="preview-img" src="img/bloyn-cut-out.jpg" alt="">
@@ -86,9 +146,9 @@
                   be released on Google Store.
                 </p>
               </div>
-            </section>
+            </section> -->
 
-            <section class="slides" id="slide3">
+            <section class="slides">
               <div class="content-contain">
                 <h3 class="slide-title">Bonus video: Gamification</h3>
                 <div id="video-wrapper">
@@ -100,24 +160,27 @@
                   UX Design - Video Editing - Presentation - Personality
                 </p>
                 <a class="button" href="https://www.youtube.com/watch?v=_v5Yw6rfI0A" target="_blank">Check it out!</a>
-                <p class="project-description">
-                  Doing my 2. semester of my Multimedia Design education, 
-                  we were tasked to make a video, where we should present 
-                  a topic. The topic I chose was Gamification, which is using 
-                  video game elements in your products to keep the user engaged.
-                  <br><br>
-                  This video took a little less than a week to make and got 
-                  a lot of praise from my classmates as well as my teacher, 
-                  who all found the video entertaining and funny. So, the 
-                  video has made it into my portfolio, since it shows a bit 
-                  of my personality, humour, and my skills as a presenter and 
-                  video editor. 
-                  <br>
-                  The video is in danish, but might still be worth 
-                  a watch if you do not understand danish. 
-                  <br><br>
-                  Enjoy.
-                </p>
+                <div class="project-description">
+                  <h4>The project</h4>
+                  <p>
+                    Doing my 2. semester of my Multimedia Design education, 
+                    we were tasked to make a video, where we should present 
+                    a topic. The topic I chose was Gamification, which is using 
+                    video game elements in your products to keep the user engaged.
+                    <br><br>
+                    This video took a little less than a week to make and got 
+                    a lot of praise from my classmates as well as my teacher, 
+                    who all found the video entertaining and funny. So, the 
+                    video has made it into my portfolio, since it shows a bit 
+                    of my personality, humour, and my skills as a presenter and 
+                    video editor. 
+                    <br>
+                    The video is in danish, but might still be worth 
+                    a watch if you do not understand danish. 
+                    <br><br>
+                    Enjoy.
+                  </p>
+                </div>
               </div>
             </section>
           </div>
@@ -144,27 +207,30 @@
                 </p>
                 <p>
                   First, I tried my hands on the art of graphic design, 
-                  but those hands were not cooperating. Then doing my 
-                  Multimedia Design education I focused on the coding, 
-                  which worked better for me, so I followed it up with 
-                  a bachelor in Web Development, because it feels great 
-                  to bring your ideas to life.
+                  but those hands were not cooperating. <br>
+                  Then I wanted to develop my interest in UX design by taking the Multimedia Design education, 
+                  which worked better for me, but I also realized how much I enjoy coding. <br>
+                  So I followed it up with a bachelor in Web Development, and it felt right,
+                  because I love bringing ideas to life.
                 </p>
                 <p>
                   The more I learn, the more I want to know, 
-                  as I realize just how much more I have yet to learn.
-                  I love diving into topics, and try to understand what happens 
+                  as I realize just how much more I have yet to learn. <br>
+                  That realization have now led me to start a Bachelor of Engineering in Software Technology. <br>
+                  Because I love diving into topics, and try to understand what happens 
                   behind the scenes. I learn the best when I can draw 
-                  from the experiences of others and try it out myself.
+                  from the experiences of others and try it out myself. <br>
                   For the same reasons, I love to share my knowledge with others,
                   when working in a team.
                 </p>
                 <p>
-                  I am a detail-oriented and dedicated worker, who try to make everything right.
-                  If the solution is not smooth and easy to understand for the consumer,
-                  it can be improved. 
-                  So, if you want someone who takes their job serious, with a good work ethic, 
-                  but still have time for fun, let us get in touch.
+                  I am a detail-oriented and dedicated worker, with a good work ethic.
+                  If the solution is not smooth and intuitive it can be improved. <br>
+                  I am motivated by results and improvement, 
+                  as well as a good relationship with my coworkers. <br>
+                  Always like to take part in social arrangment and short talks in the breaks. <br>
+                  If you want someone who is motivated, socialable and have his whole career ahead of him, 
+                  let us get in touch.
                 </p>
               </div>
             </section>
