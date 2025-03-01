@@ -161,9 +161,6 @@ h2 {
     cursor: pointer;
     padding: 5px;
 }
-.slide-arrow:hover {
-    background-color: var(--light-yellow-50);
-}
 .pagination {
     display: flex;
     justify-content: center;
