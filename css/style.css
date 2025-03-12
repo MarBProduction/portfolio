@@ -2,9 +2,12 @@
     --background: #f7f7f7;
     --purple: #8731de;
     --dark-purple: #511191;
+    --dark-purple-50: rgb(81, 17, 145, 0.5);
     --light-purple: #a852ff;
     --light-purple-50: rgb(168, 82, 255, 0.5);
     --yellow: #8F9103;
+    --yellow-50: rgb(219, 222, 49, 0.5);
+    --yellow-20: rgb(219, 222, 49, 0.2);
     --light-yellow: #DBDE31;
     --light-yellow-50: rgb(219, 222, 49, 0.5);
     --light-grey: #C6C6C6;
@@ -15,6 +18,16 @@
     --shadow: rgb(0, 0, 0, 0.5);
     --white: #ffffff;
     --black: #000000;
+
+    /* Dark mode */
+    --background-dark: #090909;
+    --text-dark: #E4E4E4;
+    --text-heading-dark: #FAFAFA;
+    --dark-grey-dark: #0f0f0f;
+    --grey-dark: #181818;
+    --light-grey-dark: #2b2b2b;
+    --text-light-grey-dark: #646464;
+    --shadow-dark: #3C3C3C;
 }
 
 * {
@@ -35,6 +48,7 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 #header {
+    position: relative;
     width: 100%;
     height: 40px;
     z-index: 100;
@@ -45,6 +59,17 @@ body {
 #logo {
     height: 100%;
     cursor: pointer;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 24px;
+    cursor: pointer;
+}
+#dark-mode-toggle img {
+    width: 100%;
 }
 
 /* Navigation
@@ -354,6 +379,9 @@ h1 {
 .hard-skills-icons .wide-logo {
     width: 80px;
 }
+.dark-mode-icon {
+    display: none;
+}
 
 /* Contact
 -----------------------------------------------------------------------------*/
@@ -440,6 +468,103 @@ h1 {
 #footer {}
 
 
+/* DARK MODE
+-----------------------------------------------------------------------------*/
+.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Header */
+.dark-mode  #header {
+    background-color: var(--dark-purple);
+}
+
+/* Navigation */
+.dark-mode #menu-mobile {
+    background-color: var(--dark-grey-dark);
+}
+.dark-mode #menu-mobile div{
+    color: var(--text-heading-dark);
+    border-color: var(--light-grey-dark);
+}
+.dark-mode #menu-mobile .main-active {
+    color: var(--purple);
+    border-top: none;
+    border-right: solid 1px var(--light-grey-dark);
+    border-bottom: solid 1px var(--light-grey-dark);
+    border-left: solid 1px var(--light-grey-dark);
+    background-color: var(--background-dark);
+}
+
+/* Content */
+.dark-mode .content-contain {
+    background-color: var(--grey-dark);
+    box-shadow: 0px 1px 2px var(--shadow-dark);
+}
+
+.dark-mode h2 {
+    color: var(--text-heading-dark);
+}
+
+.dark-mode .inner-dot {
+    background: var(--yellow-20);
+}
+.dark-mode .active-dot .inner-dot {
+    background: var(--yellow);
+}
+
+/* Home */
+.dark-mode #home {
+    background-color: var(--background-dark);
+}
+
+.dark-mode #profile-picture {
+    opacity: 0.8;
+}
+
+.dark-mode #background-shape {
+    background-color: var(--grey-dark);
+}
+
+.dark-mode h1 {
+    color: var(--text-heading-dark);
+}
+
+.dark-mode .job-role,
+.dark-mode #job-role-common-denominator {
+    color: var(--light-purple);
+}
+.dark-mode .job-role {
+    background-color: var(--dark-purple-50);
+}
+
+/* Projects */
+.dark-mode .keywords {
+    color: var(--text-light-grey-dark);
+}
+
+.dark-mode .button {
+    color: var(--light-yellow);
+    background-color: var(--yellow-50);
+}
+.dark-mode .button:hover {
+    background-color: var(--yellow);
+}
+
+/* About me */
+.dark-mode .light-mode-icon {
+    display: none;
+}
+.dark-mode .dark-mode-icon {
+    display: inline;
+}
+
+/* Contact */
+.dark-mode .testimonial-content {
+    background-color: var(--light-grey-dark);
+}
+
 /* MEDIA QUERIES 
 -----------------------------------------------------------------------------*/
 
@@ -452,6 +577,12 @@ h1 {
     /* Header */
     #header {
         height: 50px;
+    }
+
+    #dark-mode-toggle {
+        right: 15px;
+        top: 10px;
+        width: 30px;
     }
     
     /* Content */
@@ -588,6 +719,33 @@ h1 {
         width: 50px;
     }
     
+
+    /* DARK MODE */
+    .dark-mode #menu-desktop div {
+        color: var(--text-heading-dark);
+        border-color: var(--light-grey-dark);
+    }
+    .dark-mode #menu-desktop .main-active {
+        color: var(--white);
+        border-color: var(--dark-purple);
+    }
+
+    .dark-mode .sub-menu-desktop div {
+        color: var(--text-heading-dark);
+    }
+    .dark-mode .sub-menu-desktop .sub-menu-item-active {
+        color: var(--light-purple);
+        background-color: var(--dark-purple-50);
+    }
+
+    .dark-mode #background-shape {
+        background-color: transparent;
+    }
+
+    .dark-mode #quote-wrapper {
+        background-color: var(--grey-dark);
+    }
+
 }
 
 @media only screen and (min-width: 1400px) {
@@ -623,6 +781,13 @@ h1 {
         height: 60px;
     }
 
+    #dark-mode-toggle {
+        right: 20px;
+        top: 12px;
+        width: 36px;
+    }
+
+    /* Home */
     #profile-picture {
         width: 300px;
     }

@@ -7,6 +7,38 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   
 
+  /* ---------- DARK MODE TOGGLE ---------- */
+  const body = document.body
+  const darkModeButton = document.querySelector("#dark-mode-toggle")
+
+  function getTheme() {
+    const savedTheme = sessionStorage.getItem('theme');
+    if (savedTheme) {
+        return savedTheme
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function setTheme(theme){
+    if (theme === 'dark') {
+      body.classList.add("dark-mode");
+      sessionStorage.setItem('theme', 'dark')
+    } else {
+      body.classList.remove("dark-mode");
+      sessionStorage.setItem('theme', 'light')
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = sessionStorage.getItem('theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+
+  setTheme(getTheme())
+  darkModeButton.addEventListener("click", toggleTheme)
+
+
   /* ---------- CHANGE SLIDE ---------- */
   pages.forEach(page => {
     if (!page.querySelector(".sub-menu")) {
